@@ -31,7 +31,7 @@ def place_order(menu):
     while True:
 
         # TODO: Ask the customer what they want to order
-        print("What would you like to order?")
+        print("What would you like to order? ")
 
         # Create a variable for the menu item number
         i = 1
@@ -64,14 +64,14 @@ def place_order(menu):
 
         # TODO: Ask the customer if they would like to order anything else
         # TODO: Let the customer know if they should type 'n' or 'N' to quit
-        continue_order = input("Would you like to keep ordering? (N)o to quit: ")
+        continue_order = input("Would you like to keep ordering? (N) to quit: ")
 
         # TODO: Write a conditional statement that checks the user's input
         # TODO: The conditional statement should check for 'n' or 'N'
         if continue_order.lower() == "n":
 
             # TODO: Write a print statement that thanks the customer for their order
-            print("Thank you for your order! Here is your receipt:\n")
+            print("Thank you for your order.")
 
             # TODO: Use list comprehension to create a list called prices_list,
             # TODO: which contains the total prices for each item in the order list:
@@ -120,7 +120,7 @@ def update_order(order, menu_selection, menu_items):
 
             # TODO: Ask the customer for the quantity of the menu item
             # TODO: Use the item name variable in the question
-            quantity_input = input(f"What quantity of {item_name} would you like? (This will default to 1 if number is not entered): ")
+            quantity_input = input(f"What quantity of {item_name} would you like? \n(This will default to 1 if number is not entered)\n")
 
             # TODO: Check if the quantity is a number, default to 1 if not
             quantity = int(quantity_input) if quantity_input.isdigit() else 1
@@ -140,7 +140,7 @@ def update_order(order, menu_selection, menu_items):
     # TODO: Print the menu selection and
     # TODO: Tell the customer they didn't select a menu option
     else:
-        print("Sorry, that number isn't an option.")
+        print(f"{menu_selection} was not a menu option.")
 
     # TODO: Return the updated order
     return order
